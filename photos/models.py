@@ -5,6 +5,19 @@ from django.db import models
 class Category(models.Model):
     category_name = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.name
+
+    def save_category(self):
+        self.save()
+
+    def delete_category(self):
+        self.delete()
+
+    @classmethod
+    def update_category(cls, id, new_category):
+        cls.objects.filter(id=id).update(category_name=new_category)
+
 class Location(models.Model):
     country = models.CharField(max_length=30)
     city = models.CharField(max_length=30)
