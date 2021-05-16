@@ -93,3 +93,9 @@ class ImageTest(TestCase):
     def test_get_image_by_id(self):
         image = Image.get_image_by_id(self.pic.id)
         self.assertTrue(image, self.pic)
+
+    def test_search_image(self):
+        image = Image.search_image('Cars')
+        self.assertTrue(len(image) == 1)
+
+        
