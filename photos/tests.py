@@ -89,3 +89,7 @@ class ImageTest(TestCase):
         self.pic.delete_image()
         image = Image.objects.all()
         self.assertTrue(len(image) == 0)
+
+    def test_get_image_by_id(self):
+        image = Image.get_image_by_id(self.pic.id)
+        self.assertTrue(image, self.pic)
