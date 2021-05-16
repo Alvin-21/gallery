@@ -33,7 +33,7 @@ class Location(models.Model):
 
     @classmethod
     def update_location(cls, id, new_city, new_country):
-        cls.objects.filter(id=id).update(new_city=new_city, new_country=new_country)
+        cls.objects.filter(id=id).update(city=new_city, country=new_country)
 
 class Image(models.Model):
     image = models.ImageField(upload_to='pictures/', null=True)
