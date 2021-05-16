@@ -61,5 +61,5 @@ class Image(models.Model):
 
     @classmethod
     def filter_by_location(cls, city):
-        images = cls.objects.filter(location__city__=city)
+        images = cls.objects.filter(location__city__icontains=city)
         return images

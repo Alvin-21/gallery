@@ -98,4 +98,6 @@ class ImageTest(TestCase):
         image = Image.search_image('Cars')
         self.assertTrue(len(image) == 1)
 
-        
+    def test_filter_by_location(self):
+        image = Image.filter_by_location('Abuja')
+        self.assertTrue(len(image) == 1)
