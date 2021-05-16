@@ -61,3 +61,22 @@ class LocationTest(TestCase):
         self.nai.update_location(self.nai.id, 'Kampala', 'Uganda')
         location = Location.objects.filter(city='Kampala')
         self.assertTrue(len(location) == 1)
+
+    
+class ImageTest(TestCase):
+    def tearDown(self):
+        Category.objects.all().delete()
+        Location.objects.all().delete()
+        Image.objects.all().delete()
+
+    def setUp(self):
+        self.car = Category(category_name='Cars')
+        self.car.save_category()
+        self.abuja = Location(city='Abuja', country='Nigeria')
+        self.abuja.save_location()
+        self.pic = Image(name='Porsche', description='A wonderful car', location=self.abuja)
+        self.pic.save_image()
+        self.pic.category.add(self.car)
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.pic, Image))
