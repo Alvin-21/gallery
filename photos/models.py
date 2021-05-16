@@ -42,3 +42,24 @@ class Image(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     category = models.ManyToManyField(Category)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
+
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()
+
+    @classmethod
+    def get_image_by_id(cls, id):
+        image = cls.objects.filter(id=id)
+        return image
+
+    @classmethod
+    def search_image(cls, category):
+        images = cls.objects.filter(category__icontains=category)
+        return images
+
+    @classmethod
+    def filter_by_location(cls, city):
+        images = cls.objects.filter(location__city__=city)
+        return images
