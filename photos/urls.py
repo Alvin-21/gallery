@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     re_path(r'^$', views.index, name='homepage'),
     re_path(r'^image/(\d+)', views.view_image, name='image'),
+    re_path(r'^categories/', views.search_categories, name='categories'),
 ]
 
 if settings.DEBUG:
