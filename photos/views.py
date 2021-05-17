@@ -12,4 +12,16 @@ def view_image(request, image_id):
     image = Image.get_image_by_id(image_id)
     return render(request, 'view.html', {"image": image})
 
+def search_categories(request):
+    if 'category' in request.GET and request.GET["category"]:
+        search_term = request.GET.get("category")
+        searched_images = Image.search_image(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'search_categories.html', {"message": message, "images": searched_images})
+
+    else:
+        message = "You haven't searched for any category"
+        return render(request, 'search_categories.html', {"message": message})
+
 
