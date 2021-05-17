@@ -3,5 +3,5 @@ from django.http import HttpResponse, Http404
 
 # Create your views here.
 
-def test(request):
-    return render(request, 'test.html')
+def homepage(request):
+    return render(request, 'index.html')
