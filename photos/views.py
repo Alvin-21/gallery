@@ -4,7 +4,7 @@ from .models import Category, Location, Image
 
 # Create your views here.
 
-def homepage(request):
+def index(request):
     images = Image.objects.all()
     return render(request, 'index.html', {"images": images})
 
