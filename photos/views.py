@@ -24,4 +24,14 @@ def search_categories(request):
         message = "You haven't searched for any category"
         return render(request, 'search_categories.html', {"message": message})
 
+def search_locations(request):
+    if 'city' in request.GET and request.GET["city"]:
+        search_term = request.GET.get("city")
+        searched_images = Image.filter_by_location(search_term)
+        message = f"{search_term}"
 
+        return render(request, 'search_locations.html', {"message": message, "images": searched_images})
+
+    else:
+        message = "You haven't searched for any city"
+        return render(request, 'search_locations.html', {"message": message})
