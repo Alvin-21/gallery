@@ -38,8 +38,6 @@ To fix a bug or enhance an existing module, follow these steps:
 
 ### Bug / Feature Request
 
-The images are not displaying, however, they have been uploaded to the databse, kindly reach out to me on [email](mailto:alvinawuor8@gmail.com) if you know a way to solve the problem.
-
 If you find another bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/alvin-21/gallery/issues/new) by including your search query and the expected result.
 
 If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/alvin-21/gallery/issues/new). Please include sample queries and their corresponding results.
