@@ -7,6 +7,7 @@ urlpatterns = [
     re_path(r'^$', views.index, name='homepage'),
     re_path(r'^image/(\d+)', views.view_image, name='image'),
     re_path(r'^categories/', views.search_categories, name='categories'),
+    re_path(r'^cities/', views.search_locations, name='locations'),
 ]
 
 if settings.DEBUG:
