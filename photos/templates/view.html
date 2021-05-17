@@ -1,9 +1,9 @@
 {%extends 'base.html'%}
 
 {%block content%}
-<div class="container">
+<div class="container bg">
     <div class="card-columns">
-        <div class="card">
+        <div class="card card-bg color">
             <img class="card-img-top" src="{{image.image.url}}" alt="{{image.name}}">
             <div class="card-body">
                 <h5 class="card-title">{{image.name}}</h5>
@@ -15,7 +15,7 @@
                 <p class="card-text">{{image.location}}</p>
             </div>
             <div class="card-footer">
-                <p class="card-text"><small class="text-muted">Posted on {{image.pub_date}}</small></p>
+                <p class="card-text"><small>Posted on {{image.pub_date}}</small></p>
             </div>
         </div>
     </div>

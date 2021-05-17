@@ -2,8 +2,8 @@
 
 {%block content%}
 
-<div class="container">
-    <h3>Please enter the category you're looking for in the below search field.</h3>
+<div class="container bg">
+    <h3 class="color">Please enter the category you're looking for in the below search field.</h3>
     <div class="col-sm-4 col-md-4 mx-auto">
         <form class="form" role="search" action="#">
             <div class="input-group">
@@ -26,8 +26,8 @@
         {% for image in images %}
         <div class="card">
             <img class="card-img-top" src="{{image.image.url}}" alt="{{image.name}}">
-            <div class="card-footer">
-                <a class="btn btn-sm" href="{% url 'image' image.id %}">View Image</a>
+            <div class="card-footer card-bg">
+                <a class="btn btn-sm card-color" href="{% url 'image' image.id %}">View Image</a>
             </div>
         </div>
         {% endfor %}

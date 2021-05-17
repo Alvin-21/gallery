@@ -1,11 +1,23 @@
-.navbar-bg {
+.navbar-bg, .card-bg {
     background-color: #05386B;
 }
 
-.navbar-color, .color {
+.color {
     color: #EDF5E1;
 }
 
-nav a:hover, .bg {
+nav a:hover{
     color: #5CDB95;
+}
+
+.bg {
+    background-color: #5CDB95;
+}
+
+.card-color {
+    color: #8EE4AF;
+}
+
+.card-footer a:hover {
+    color: #EDF5E1;
 }
