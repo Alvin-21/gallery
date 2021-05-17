@@ -10,7 +10,7 @@
 
 ## Demo
 
-Here is a working live demo : 
+Here is a working live demo : https://ysl-gallery.herokuapp.com
 
 ### Landing Page
 
