@@ -21,3 +21,11 @@ nav a:hover{
 .card-footer a:hover {
     color: #EDF5E1;
 }
+
+.search-color {
+    color: #05386B;
+}
+
+i:hover {
+    color: #379683;
+}
