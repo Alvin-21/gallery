@@ -9,7 +9,7 @@
         <div class="card">
             <img class="card-img-top" src="{{image.image.url}}" alt="{{image.name}}">
             <div class="card-footer">
-                <a class="btn btn-sm" href="#">View Image</a>
+                <a class="btn btn-sm" href="{% url 'image' image.id %}">View Image</a>
             </div>
         </div>
         {% endfor %}
